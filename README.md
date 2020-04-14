@@ -18,7 +18,7 @@ For example,
 
 ## Your challenge:
 
-During this hour, you will be challenged to review your raw ruby skills.
+During this hour, you will be challenged to review your raw ruby skills. Testing is not required.
 
 Write a script in the palindrome.rb file that finds all numbers between 1 and 1000 that when reversed, and added to itself, create a numeric palindrome.
 
