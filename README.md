@@ -1,4 +1,4 @@
-#Ruby Challenge!
+# Ruby Challenge!
 
 What is a palindrome? A palindrome is something that is read the same forward as it is backwards.
 
@@ -11,8 +11,12 @@ For example,
 - 878
 - 123454321
 
+## Setup
 
-##Your challenge:
+1. Fork and clone this repo
+2. `cd racecar`
+
+## Your challenge:
 
 During this hour, you will be challenged to review your raw ruby skills.
 
