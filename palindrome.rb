@@ -7,24 +7,27 @@ require "pry"
 #
 # NumericPalindromeFinder.new
 
-def numeric_palindromes
-  (1..1000).reduce([]) do |palindromes, index|
-    
-    original_string = index.to_s
-    reversed_original_string = original_string.reverse
+class Palindromes
+  def self.numeric_palindromes(range)
+    range.reduce([]) do |palindromes, index|
 
-    reversed_number = reversed_original_string.to_i
-    big_number = index + reversed_number
+      original_string = index.to_s
+      reversed_original_string = original_string.reverse
 
-    big_number_string = big_number.to_s
-    reversed_big_number_string = big_number_string.reverse
+      reversed_number = reversed_original_string.to_i
+      big_number = index + reversed_number
 
-    if reversed_big_number_string == big_number_string
-      palindromes << index
+      big_number_string = big_number.to_s
+      reversed_big_number_string = big_number_string.reverse
+
+      if reversed_big_number_string == big_number_string
+        palindromes << index
+      end
+
+      palindromes
     end
-
-    palindromes
   end
 end
 
-puts numeric_palindromes
+
+p Palindromes.numeric_palindromes(1..1000)
