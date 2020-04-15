@@ -15,14 +15,9 @@ class PalindromeScript
       add_numbers(num)
     end
   end
-
-  def number_to_comparable_array(num)
-    num.to_s.chars
-  end
-
+  
   def palindrome?(num)
-    num_array = number_to_comparable_array(num)
-    num_array.first == num_array.last
+    num.to_s == num.to_s.reverse
   end
 
   def display_all_palindromes(num_range)
