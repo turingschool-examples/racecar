@@ -26,14 +26,14 @@
 # make a range of numbers and turn to an array
 number_range = (1..1000).to_a
 
-# add each number to itself and turn to a string
-each_doubled = number_range.map do |number|
-  (number + number).to_s
+# add each number to itself reversed
+add_reverse_number = number_range.map do |number|
+  number + (number.to_s.reverse).to_i
 end
 
 # iterate over each number to see if they are a palindrome
-all_palindromes = each_doubled.find_all do |string|
-  string == string.reverse
+all_palindromes = add_reverse_number.find_all do |integer|
+  integer.to_s == integer.to_s.reverse
 end
 
 p "There are #{all_palindromes.count} numeric palindromes in the following collection:"
