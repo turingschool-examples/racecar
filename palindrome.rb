@@ -21,8 +21,8 @@ number = 1
     number += 1
 end
 
-binding.pry
-
+# binding.pry
+p palindrome
 
 # range 1..1000
 
