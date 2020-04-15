@@ -14,7 +14,9 @@ range.each do |num|
 end
 
 if correct_answer == palindromes
+  p 'The following numbers, when reversed and added to itself, produces a palindrome:'
   p palindromes
+  p 'Thank you for visiting.'
 else
   p "You messed up somewhere."
 end
