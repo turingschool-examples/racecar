@@ -1,1 +1,16 @@
-# write a script in this file that finds all numbers between 1 and 1000 that when reversed, and added to itself, create a numeric palindrome.
+class Palindrome
+  def initialize(number)
+    @number = number
+  end
+
+  def get_range
+    (1..@number).to_a
+  end
+
+  def return_palindromes
+    get_range.select do |number|
+      product = number + number.to_s.reverse.to_i
+      product.to_s == product.to_s.reverse
+    end
+  end
+end
