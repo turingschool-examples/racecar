@@ -1,11 +1,10 @@
-# write a script in this file that finds all numbers between 1 and 1000 that when reversed, and added to itself, create a numeric palindrome.
 require './palindrome'
 
 puts "Welcome to the Palindrome-inator!"
-puts "Enter a number and the Palindrome-inator will determine which the numbers between 1 and it, are palindromes!"
+puts "Enter a number and the Palindrome-inator will determine which numbers between 1 and it, are palindromes (when added to it's reciprocal)!"
 
 input = gets.chomp
-while input.downcase != 'q'
+while input.downcase != 'q' || input.downcase == 'quit'
   if input.to_i < 0
     puts "Sorry there are no palidromes for negative numbers; enter a new number, or 'Q' to quit."
     input = gets.chomp
