@@ -2,14 +2,15 @@
 # when reversed, and added to itself, create a numeric palindrome.
 
 range = (1..1000).to_a
-numeric_palindromes = []
 
 def sum_of_num(num)
   num.to_s.to_i + num.to_s.reverse.to_i
 end
 
-range.each do | num |
-  numeric_palindromes << num if sum_of_num(num) == sum_of_num(num).to_s.reverse.to_i
+def find_numeric_palindromes(range)
+  range.map do | num |
+    num if sum_of_num(num) == sum_of_num(num).to_s.reverse.to_i
+  end.compact
 end
 
-p numeric_palindromes
+p find_numeric_palindromes(range)
