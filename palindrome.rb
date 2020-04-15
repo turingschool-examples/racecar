@@ -33,13 +33,13 @@
 #
 # puts problem_four.uniq.sort
 
-new_array = []
-array = (1..1000).to_a
-array.each do |a|
-  x = a + a.to_s.reverse.to_i
-  if x == x.to_s.reverse.to_i
-    new_array << a
+palindrome = []
+original_array = (1..1000).to_a
+original_array.each do |number|
+  total_sum = number + number.to_s.reverse.to_i
+  if total_sum == total_sum.to_s.reverse.to_i
+    palindrome << number
   end
 end
 
-puts new_array
+puts palindrome
