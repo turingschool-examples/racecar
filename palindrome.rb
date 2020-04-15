@@ -18,16 +18,26 @@ class Palindromes
       big_number = index + reversed_number
 
       big_number_string = big_number.to_s
-      reversed_big_number_string = big_number_string.reverse
 
-      if reversed_big_number_string == big_number_string
+      if self.is_palindrome?(big_number_string)
         palindromes << index
       end
 
       palindromes
     end
   end
+
+  def self.is_palindrome?(string)
+    if string.length <= 1
+      return true
+    else
+      string[0] == string[-1] && self.is_palindrome?(string.slice(1..-2))
+    end
+  end
 end
 
 
 p Palindromes.numeric_palindromes(1..1000)
+
+p "racecar"
+p Palindromes.is_palindrome?("racecar")
