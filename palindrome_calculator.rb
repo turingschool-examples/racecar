@@ -1,6 +1,5 @@
 class PalindromeCalculator
 
-  attr_reader :range, :palindrome
   def initialize(range)
     @range = range
     @palindromes = []
@@ -19,7 +18,7 @@ class PalindromeCalculator
   end
 
   def find_palindromes
-    range.each do |number|
+    @range.each do |number|
       if palindrome?(calculate(number))
         @palindromes << number
       end
