@@ -1,1 +1,11 @@
-# write a script in this file that finds all numbers between 1 and 1000 that when reversed, and added to itself, create a numeric palindrome.
+def palindrome
+  count = 0
+  palindrome = []
+  x = rand(100)
+  num = x + (((x.to_s).split("").reverse).join).to_i
+  array = (num.to_s).split("")
+  if array[0] == array[-1]
+    palindrome << num
+  end
+  count = count + 1
+end
