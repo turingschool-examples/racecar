@@ -16,6 +16,11 @@ For example,
 1. Fork and clone this repo
 2. `cd racecar`
 
+## Submission
+1. Commit 
+2. Push up to your master
+3. Make a PR to Turingschool-examples with your name as the title 
+
 ## Your challenge:
 
 During this hour, you will be challenged to review your raw ruby skills. Testing is not required.
