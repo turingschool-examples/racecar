@@ -1,17 +1,27 @@
 # write a script in this file that finds all numbers between 1 and 1000 that when reversed, and added to itself, create a numeric palindrome.
 require 'pry'
 
-number = 10
+# number = 10
+# number = 12
+palindrome = []
+number = 1
 
 # until number == 10 do
-1.times do
+1000.times do
   # string = number.to_s
-  number_to_string = number.to_s
-  string_reverse = number.to_s.reverse
-  binding.pry
+  # number_to_string = number.to_s
+  number_reverse = number.to_s.reverse.to_i
+  checkit = number + number_reverse
+  # split = checkit.to_s.split("")
+  checkit_reverse = checkit.to_s.reverse.to_i
+
+  if checkit == checkit_reverse
+    palindrome << number
+  end
+    number += 1
 end
 
-
+binding.pry
 
 
 # range 1..1000
