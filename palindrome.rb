@@ -11,10 +11,7 @@ class Palindrome
   end
 
   def palindrome?(num)
-    sum = reverse_and_add(num)
-    forward = sum.to_s
-    backward = sum.to_s.reverse
-    forward == backward
+    reverse_and_add(num).to_s == reverse_and_add(num).to_s.reverse
   end
 
 end
