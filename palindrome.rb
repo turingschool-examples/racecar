@@ -18,7 +18,3 @@ class Palindrome
   end
 
 end
-
-palindromes = Palindrome.new
-
-puts palindromes.palindrome_nums
