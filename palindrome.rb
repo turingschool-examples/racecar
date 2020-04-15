@@ -7,10 +7,12 @@ def sum_of_num(num)
   num.to_s.to_i + num.to_s.reverse.to_i
 end
 
+def numeric_palindrome?(num)
+  sum_of_num(num) == sum_of_num(num).to_s.reverse.to_i
+end
+
 def find_numeric_palindromes(range)
-  range.map do | num |
-    num if sum_of_num(num) == sum_of_num(num).to_s.reverse.to_i
-  end.compact
+  range.map { | num | num if numeric_palindrome?(num) }.compact
 end
 
 p find_numeric_palindromes(range)
