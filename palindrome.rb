@@ -3,7 +3,7 @@
 require 'matrix'
 
 def numbers_array
-  (1..100).to_a
+  (1..1000).to_a
 end
 
 def morphed_nums_array
@@ -19,8 +19,7 @@ def palindrome?(number)
   number == reverse(number)
 end
 
-# arrays = [numbers_array], [morphed_nums_array]
-# arrays.map { |a| Vector[*a] }.inject(:+)
+
 
 # puts numbers_array
 # puts morphed_nums_array
