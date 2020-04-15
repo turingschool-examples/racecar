@@ -1,8 +1,7 @@
 class Palindrome
 
   def palindrome_nums
-    range = Array (1..1000)
-    range.select {|num| palindrome?(num)}
+    Array(1..1000).select {|num| palindrome?(num)}
   end
 
   private
