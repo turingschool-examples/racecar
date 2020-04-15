@@ -17,13 +17,14 @@
 #
 # def problem_four
 #   # palindrome = *(1..1000)
-#   palindrome = [ ]
-#   array = 1.upto(1000)
+#   palindrome = []
+#   # array = 1.upto(1000)
+#   array = (1...1000).to_a
 #   array.each do |x|
 #     # palindrome.each do |y|
 #       add = x + x
 #       if is_a_palindrome?(add)
-#         palindrome << add
+#         palindrome << x
 #       end
 #     # end
 #   end
@@ -32,13 +33,13 @@
 #
 # puts problem_four.uniq.sort
 
-
-array = (1..999).to_a
+new_array = []
+array = (1..1000).to_a
 array.each do |a|
-  x = a + a
+  x = a + a.to_s.reverse.to_i
   if x == x.to_s.reverse.to_i
-    array << a
+    new_array << a
   end
 end
 
-puts array
+puts new_array
